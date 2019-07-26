@@ -7,7 +7,7 @@
 
 
 // Concert Section
-
+concertData('rap')
 
 
 // End Concert Section
