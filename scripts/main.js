@@ -16,11 +16,11 @@
 
 // Restaurant Section
 restaurantDataFetcher().then(restArray => {
-    for (const restaurant of restArray.restaurants) {
-        const restaurantHTML = createRestaurantHTML(restaurant)
-        putRestaurantToDOM(restaurantHTML)
-    }
-}) 
+//     for (const restaurant of restArray.restaurants) {
+//         const restaurantHTML = createRestaurantHTML(restaurant)
+//         putRestaurantToDOM(restaurantHTML)
+//     }
+// }) 
 
 // End Restaurant Section
 
