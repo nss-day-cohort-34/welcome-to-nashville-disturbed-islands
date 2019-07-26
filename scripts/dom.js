@@ -15,6 +15,14 @@
 
 
 // Restaurant Section
+const restResultsSection = document.querySelector("#restaurantResults")
+const restItinerarySection = document.querySelector("#myRestaurant")
+const putRestaurantToDOM = (htmlRep) => {
+    restResultsSection.innerHTML += htmlRep
+}
+const putRestToItinerary = (htmlRep) => {
+    restItinerarySection.innerHTML += htmlRep
+}
 
 
 
