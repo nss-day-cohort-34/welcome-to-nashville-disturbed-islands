@@ -7,7 +7,16 @@
 
 
 // Concert Section
+const musicSerchSelector = document.querySelector("#concertSearch")
+const musicResultsSelector = document.querySelector("#concertResults")
+const musicItinerarySelector = document.querySelector("#myConcert")
 
+const concertHTMLRender = (HtmlInsert) => {
+
+    const ConcertSerchInsert = musicSerchSelector.innerHTML += HtmlInsert;
+    const ConcertResultsInsert = musicResultsSelector.innerHTML += HtmlInsert;
+    const ConcertItineraryInsert = musicItinerarySelector.innerHTML += HtmlInsert;
+}
 
 
 // End Concert Section
