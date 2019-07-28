@@ -7,7 +7,7 @@
 
 
 // Concert Section
-concertData('rap')
+concertData('country')
 
 
 // End Concert Section
@@ -20,7 +20,7 @@ restaurantDataFetcher().then(restArray => {
         const restaurantHTML = createRestaurantHTML(restaurant)
         putRestaurantToDOM(restaurantHTML)
     }
-}) 
+})
 
 // End Restaurant Section
 

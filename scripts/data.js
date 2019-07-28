@@ -1,8 +1,8 @@
 // Park Section
 const parksAPI = (selection) => {
     return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?`)
-    .then(response => response.json())
-    .then(data => console.log(data))
+        .then(response => response.json())
+        .then(data => console.log(data))
 }
 
 parksAPI()
@@ -24,9 +24,9 @@ const concertData = (search) => {
 
 // Restaurant Section
 const restaurantDataFetcher = () => {
-   return fetch("https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&start=first&sort=rating&apikey=a0eaa35e7faf94a1910b953153e9caa4") 
-    .then(results => results.json())
-    
+    return fetch("https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&start=first&sort=rating&apikey=a0eaa35e7faf94a1910b953153e9caa4")
+        .then(results => results.json())
+
 }
 
 
