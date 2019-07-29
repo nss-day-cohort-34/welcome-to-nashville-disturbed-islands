@@ -5,14 +5,22 @@
   color: white;
   font-size: 10px;
   border: 2px solid grey;
-  border-left: none; /* Prevent double borders */
+  /* Prevent double borders */
+  border-left: none;
   cursor: pointer;
 }
+
 #concertSearchBut:hover {
   background: navy;
 }
-#concertSearch {
+
+/* #concertSearch {
   background-color: #418fde;
   width: auto;
-  height: 20%;
+  height: 20%; */
+/* } */
+
+#concertResults {
+  border: 2px solid goldenrod;
+  background: #418fde;
 }
