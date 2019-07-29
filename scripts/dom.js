@@ -1,5 +1,16 @@
 // Park Section
 
+const parkItineraryContainer = document.querySelector("#myPark")
+const parkResultsContainer = document.querySelector("#parkResults")
+
+const parksToDom = parkHTML => {
+    parkResultsContainer.innerHTML += parkHTML
+}
+
+const parkItineraryToDom = itineraryHTML => {
+     parkItinerarySection.innerHTML = itineraryHTML 
+}
+
 
 
 // End Park Section

@@ -1,11 +1,13 @@
 // Park Section
 const parksAPI = (selection) => {
-    return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?`)
+    return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?${selection}`)
     .then(response => response.json())
-    .then(data => console.log(data))
 }
 
-parksAPI()
+const getParkByName = (parkName) => {
+    return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?park_name=${parkName}`)
+    .then(response => response.json())
+}
 
 // End Park Section
 
