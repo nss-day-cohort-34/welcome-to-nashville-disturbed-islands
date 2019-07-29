@@ -30,16 +30,20 @@
 
 
 
-const meetUpResults = document.querySelector("#meetUpResults");
+
 
 // MeetUp Sectiot
 // DOM Selectors
 const meetUpSelector = document.querySelector("#eventSubmit");
 const meetUpItinerarySelector = document.querySelector("#myMeetup")
 
+const meetupResults = document.querySelector("#meetUpResults")
+
 // DOM input for search results
 const resultsHTMLRender = HTMLinsert => {
-    mee.innerHTML += HTMLinsert;
+    meetupResults.innerHTML += HTMLinsert;
+    
+    
 };
 
 const resultsMeetUpHTMLRender = HTMLinsert => {

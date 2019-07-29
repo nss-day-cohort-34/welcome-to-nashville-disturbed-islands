@@ -34,6 +34,7 @@ document.querySelector("#eventSubmit").addEventListener("click", event => {
      meetUpArray.events.forEach(meetUp => {
          const htmlRep = meetUpHTML(meetUp);
          console.log("HTMLrep", htmlRep)
+       
      resultsHTMLRender(htmlRep);
    });
  });
