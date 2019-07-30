@@ -109,15 +109,13 @@ restResultsSection.addEventListener("click", (event) => {
 
 // MeetUp Section
 document.querySelector("#eventSubmit").addEventListener("click", event => {
-  const searchValue = document.querySelector("#meetUpSearch").value
   event.preventDefault()
+  const searchValue = document.querySelector("#meetUpSearch").value
   meetUpAPI(searchValue)
   .then(meetUpArray => {
-    console.log(meetUpArray)
     meetUpArray.events.forEach(meetUp => {
       const htmlRep = meetUpHTML(meetUp);
       //  console.log("HTMLrep", htmlRep)
-      console.log(htmlRep)
       resultsHTMLRender(htmlRep)
     })
   })
@@ -128,13 +126,11 @@ document.querySelector("#eventSubmit").addEventListener("click", event => {
 // uniqueevent .then extrapulated the paramater of data and stored it into a const "eventHTML" 
 
 document.querySelector("#meetUpResults").addEventListener("click", (event) => {
-  console.log(event)
+  event.preventDefault()
   const eventID = event.target.id
-  // console.log(eventID)
   uniqueEvent(eventID)
     .then(data => {
       const eventHTML = meetUpId(data)
-
       itineraryHTMLRender(eventHTML)
     })
 })
