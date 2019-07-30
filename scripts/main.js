@@ -76,13 +76,15 @@ resultsContainer.addEventListener("click", event => {
 // Restaurant Section
 searchButton.addEventListener("click", () => {
     event.preventDefault()
+    restResultsSection.innerHTML = ""
+    
     restaurantDataFetcher(restInput.value)
-        .then(data => {
-        const restArray = data.restaurants
-
+      .then(data => {
+      const restArray = data.restaurants
         restArray.forEach(restaurant => {
             const restHTML = createRestaurantHTML(restaurant.restaurant)
             restResultsSection.innerHTML += restHTML
+          
         })
     })
 })
