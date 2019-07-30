@@ -1,0 +1,36 @@
+header {
+  background-image: url(../img/Patron-Trip.jpg);
+  height: 200px;
+  width: 100%;
+  margin: -10px 0 5px;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: aquamarine;
+  text-align: center;
+  display: flex;
+  color: crimson;
+  font: 1em sans-serif;
+}
+
+body {
+  background-image: url(../img/night-nash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: azure;
+  justify-content: center;
+}
+.ResultWindow {
+  display: flex;
+}
+
+.ItineraryWindow {
+  display: flex;
+}

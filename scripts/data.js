@@ -11,10 +11,11 @@ parksAPI();
 
 // Concert Section
 // the varible concertData is a function that returns a fetch call from the ticket master url
+// the .then parses the info from the url into json
 
 const concertData = search => {
   return fetch(
-    `https://app.ticketmaster.com/discovery/v2/events.json?apikey=67yF0arVBeAHL7bl8nHGdz1e58DPQbjd&classificationName=music&dmaId=343&keyword=${search}&size=6`
+    `https://app.ticketmaster.com/discovery/v2/events.json?apikey=67yF0arVBeAHL7bl8nHGdz1e58DPQbjd&classificationName=music&dmaId=343&keyword=${search}&size=4`
   ).then(response => response.json());
 };
 

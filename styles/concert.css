@@ -1,6 +1,7 @@
+/* concert section styles */
 #concertSearchBut {
   background-color: #418fde;
-  width: 10%;
+  width: 11%;
   padding: 5px;
   color: white;
   font-size: 10px;
@@ -14,13 +15,23 @@
   background: navy;
 }
 
-/* #concertSearch {
-  background-color: #418fde;
-  width: auto;
-  height: 20%; */
-/* } */
-
 #concertResults {
   border: 2px solid goldenrod;
   background: #418fde;
+  padding: 10px 10px 10px 10px;
+  justify-content: space-evenly;
+  width: 20%;
+  height: auto;
+  margin: 5px 5px 5px 5px;
+  opacity: 0.9;
+  text-align: center;
 }
+#myConcert {
+  border: 2px solid goldenrod;
+  background: #418fde;
+  padding: 15px 15px 15px 15px;
+  width: 20%;
+  margin: 5px 5px 5px 5px;
+  opacity: 0.9;
+}
+/* end of concert section */

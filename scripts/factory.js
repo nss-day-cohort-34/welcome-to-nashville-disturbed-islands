@@ -11,9 +11,10 @@ const htmlConcert = concertObj => {
   console.log(concertObj);
   return `
     <section class="concertSearch">
-        <h1>${concertObj.name}</h1>
-        <h2>${concertObj.dates.start.dateTime}</h2>
-        <button>Save me</button>
+        <h2>${concertObj.name}</h2>
+        <h4>Date: ${concertObj.dates.start.localDate}</h4>
+        <p>Location: ${concertObj._embedded.venues[0].name}</p>
+        <button class="saveMe">Save me</button>
     </section>
     `;
 };

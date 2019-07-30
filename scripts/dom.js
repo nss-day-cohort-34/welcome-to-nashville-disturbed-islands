@@ -8,7 +8,7 @@
 
 // Dom selectors
 const musicResultsSelector = document.querySelector("#concertResults");
-const musicItinerarySelector = document.querySelector("#myConcert");
+// const musicItinerarySelector = document.querySelector("#myConcert");
 
 // Dom input for search results
 const searchHTMLRender = HtmlInsert => {
