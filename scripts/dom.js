@@ -53,7 +53,7 @@ const toItineraryButton = document.querySelector("#addToItinerary");
 const eventSearchButton = document.querySelector("#eventSubmit");
 const meetUpItinerarySelector = document.querySelector("#myMeetUp");
 
-console.log(meetUpItinerarySelector);
+// console.log(meetUpItinerarySelector)
 
 const meetupResults = document.querySelector("#meetUpResults");
 
