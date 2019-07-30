@@ -28,7 +28,6 @@ const buttonThing = () => {
   const buttonSave = document.querySelectorAll(".saveMe");
   buttonSave.forEach(button => {
     button.addEventListener("click", () => {
-      console.log("hi");
       const header2 = button.parentElement.childNodes[1];
       const header4 = button.parentElement.childNodes[3];
       const para = button.parentElement.childNodes[5];
