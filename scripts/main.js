@@ -1,23 +1,40 @@
+// Reference to dom
+// Event listener
+// Get data
+// Html Representation
+// Render to dom
 
-// when the user makes a ${selection} and clicks the "search" button (event) 
-document.querySelector("#parkBTN").addEventListener("click", (event) => {
-    // the value of ${selection} is stored into the variable parkInput
+
+const resultsContainer = document.querySelector("#parkResults")
+console.log(resultsContainer)
+document.querySelector("#parkBTN").addEventListener("click", event => {
+    event.preventDefault()
     const parkInput = document.querySelector("#parkInput").value
-    // invokes the parksAPI function by passing the parkInput value into it and returns an array (parsed json where .then leaves off in data.js)
+    console.log(parkInput)
     parksAPI(parkInput)
-    .then((parkArray) => {
-        //iterates over the array and forEach park invokes the createParksHTML function for each item in the array and store it into parkHTML variable
-    parkArray.forEach(park => { 
-        const parkHTML = createParksHTML(park)
-        // takes what's in the parkHTML variable and that is passed through the parksToDom function, which when invoked adds to the parkResultsContainer
-        parksToDom(parkHTML)
-    });
+    .then(parkArray => {
+        parkArray.forEach(park => { 
+            const parkHTML = createParksHTML(park)
+            parksToDom(resultsContainer, parkHTML)
+        });
     }) 
-    .then(() => {
-        // this ensures that the .itineraryBTN is there each time this function runs 
-        itineraryParksFunction()
+})
+
+const ItineraryContainer = document.querySelector("#myPark")
+
+resultsContainer.addEventListener("click", event => {
+    const parkName = event.target.id.split(",").join(" ")
+    getParkByName(parkName)
+    .then(park => {
+        console.log(park)
+        console.log(park[0])
+        const parkHTML = createItineraryHTML(park[0])
+        parkItineraryToDom(ItineraryContainer, parkHTML)
+
     })
 })
+
+
 
 
 // const itineraryParksFunction = () => {
@@ -35,17 +52,7 @@ document.querySelector("#parkBTN").addEventListener("click", (event) => {
 // })
 
 
-// const itineraryParksFunction = () => {
-//     document.querySelectorAll(".itineraryBTN").addEventListener("click", (event) => {
-//         const parkName = event.target.id
-//         const parkName2 = parkName.split(",").join(" ")
-//         getParkByName(parkName2)
-//         .then((data) => {
-//         data.forEach(park => { 
-//             const itineraryHTML = createItineraryHTML(park)
-//             parkItineraryToDom(itineraryHTML)
-//     });
-// })
+
 
 
 // End Park Section

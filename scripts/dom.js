@@ -1,14 +1,13 @@
 // Park Section
 
-const parkItineraryContainer = document.querySelector("#myPark")
-const parkResultsContainer = document.querySelector("#parkResults")
 
-const parksToDom = parkHTML => {
-    parkResultsContainer.innerHTML += parkHTML
+
+const parksToDom = (location, string) => {
+    location.innerHTML += string
 }
 
-const parkItineraryToDom = itineraryHTML => {
-     parkItinerarySection.innerHTML = itineraryHTML 
+const parkItineraryToDom = (location, itineraryHTML) => {
+     location.innerHTML = itineraryHTML 
 }
 
 

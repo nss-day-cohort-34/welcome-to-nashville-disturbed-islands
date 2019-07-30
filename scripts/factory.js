@@ -1,6 +1,6 @@
 // Park Section
-
 const createParksHTML = parkObject => {
+    
     const nameOfPark = parkObject.park_name.split(" ").join(",") 
     return ` 
         <h2>${parkObject.park_name}</h2>
@@ -8,6 +8,7 @@ const createParksHTML = parkObject => {
         <button class="itineraryBTN" id=${nameOfPark}>Add to Itinerary</button>
    `
 }
+
 
 const createItineraryHTML = parkObject => {
     return ` 
