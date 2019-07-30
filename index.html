@@ -1,60 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
-</head>
+  <body>
+    
+    
+  
+     
+      <!-- Park Section -->
 
 <body>
-
-
   <form>
 
     <!-- Park Section -->
 
     <fieldset>
-      <textarea name="park" id="parkSearch" col="20" rows="1" placeholder="Park Search"></textarea>
-      <button type="submit">
-        SEARCH
+      <select id="parkInput">
+        <option>Search:</option>
+        <option value="playground=Yes">Playground</option>
+        <option value="dog_park=Yes">Dog Park</option>
+        <option value="hiking_trails=Yes">Hiking Trails</option>
+        <option value="swimming_pool=Yes">Swimming Pool</option>
+      </select>
+      <button id="parkBTN">
+      SEARCH
       </button>
     </fieldset>
 
     <!-- Concert Section -->
 
-    <fieldset>
-      <textarea name="concert" id="concertSearch" col="20" rows="1" placeholder="Concert Search"></textarea>
-      <button type="submit">
-        SEARCH
-      </button>
-    </fieldset>
+      <fieldset>
+        <textarea
+          name="restaurant"
+          id="restaurantSearch"
+          col="20"
+          rows="1"
+          placeholder="Restaurant Search"
+        ></textarea>
+        <button id="inputButton">
+          SEARCH
+        </button>
+      </fieldset>
 
     <!-- Restaurant Section -->
 
-    <fieldset>
-      <textarea name="restaurant" id="restaurantSearch" col="20" rows="1" placeholder="Restaurant Search"></textarea>
-      <button id="inputButton">
-        SEARCH
-      </button>
-    </fieldset>
+      <fieldset>
+        <textarea
+          name="meet up"
+          id="meetUpSearch"
+          col="20"
+          rows="1"
+          placeholder="Meet Up Search"
+        ></textarea>
+        <button  id="eventSubmit">
+          SEARCH
+        </button>
+      </fieldset>
+   
 
     <!-- MeetUp Section -->
 
     <fieldset>
-      <textarea name="meet up" id="meetUpSearch" col="20" rows="1" value="Hello"
-        placeholder="Meet Up Search"></textarea>
-      <button id="eventSubmit">
+      <textarea name="meet up" id="meetUpSearch" col="20" rows="1" placeholder="Meet Up Search"></textarea>
+      <button type="submit">
         SEARCH
       </button>
     </fieldset>
   </form>
 
   <!-- Result Window -->
-
+  <h1>Results</h1>
   <article>
     <section id="parkResults"></section>
     <section id="concertResults"></section>
@@ -64,6 +86,7 @@
 
   <!-- Itinerary Window  -->
 
+  <h1>My itinerary</h1>
   <article>
     <section id="myPark"></section>
     <section id="myConcert"></section>

@@ -1,22 +1,24 @@
-// // Park Section
-// const parksAPI = (selection) => {
-//     return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?`)
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-// }
+// Park Section
+const parksAPI = (selection) => {
+    return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?${selection}`)
+    .then(response => response.json())
+}
 
-// parksAPI()
+const getParkByName = (parkName) => {
+    return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?park_name=${parkName}`)
+    .then(response => response.json())
+}
 
 // // End Park Section
 
 
 
 // Concert Section
-// const concertData = (search) => {
-//     return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=67yF0arVBeAHL7bl8nHGdz1e58DPQbjd&classificationName=music&dmaId=343&keyword=${search}`)
-//         .then(response => response.json())
-//         .then(data => console.log(data))
-// }
+const concertData = (search) => {
+    return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=67yF0arVBeAHL7bl8nHGdz1e58DPQbjd&classificationName=music&dmaId=343&keyword=${search}`)
+        .then(response => response.json())
+        .then(data => console.log(data))
+}
 
 // End Concert Section
 
