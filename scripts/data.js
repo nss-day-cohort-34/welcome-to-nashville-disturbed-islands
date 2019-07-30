@@ -15,7 +15,7 @@ parksAPI();
 
 const concertData = search => {
   return fetch(
-    `https://app.ticketmaster.com/discovery/v2/events.json?apikey=67yF0arVBeAHL7bl8nHGdz1e58DPQbjd&classificationName=music&dmaId=343&keyword=${search}&size=4`
+    `https://app.ticketmaster.com/discovery/v2/events.json?apikey=67yF0arVBeAHL7bl8nHGdz1e58DPQbjd&classificationName=music&dmaId=343&keyword=${search}&size=6`
   ).then(response => response.json());
 };
 
