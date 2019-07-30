@@ -34,7 +34,33 @@ const itineraryHTMLCreator = (result) => {
 
 
 // MeetUp Section
+const meetUpHTML = (event) => { 
+    // console.log("Event going into meetup HTML",event)
+    return `
+    <section class="meetUpResults">
+    <h1>${event.name.text}</h1>
+    <p id="eventP">${event.description.text}</p>
+    <button id=${event.id}>Save</button>
+    </section>
+    
+    `
+}
 
 
+const meetUpId = (event) => { 
+    return `
+    <section class="meetUpResults">
+    <h1>${event.name.text}</h1>
+    <p id="eventP">${event.description.text}</p>
+    </section>
+    `
+}
+
+
+// const meetupItinerary = (result) => {
+//     return `<p id="itinerarResultHTML"></p>
+//     <button>Save Event</button>`
+    
+// }
 
 // End MeetUp Section

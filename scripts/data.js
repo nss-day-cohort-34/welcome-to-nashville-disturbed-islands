@@ -47,17 +47,43 @@ const idFetcher = (restID) => {
 // }
 
 // Used Private Key for token 
-// const meetUpAPI = (events) => {
-//     return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${events}&location.address=nashville&token=YJTAUMDIRAXX76DJBHFA`, {
-//         "headers": {
-//             "Accept": "application/json"
-//         }
-//     })
-//         .then(response => response.json())
-//         .then(data => console.log(data))
+const meetUpAPI = (searchItem) => {
+    return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchItem}&location.address=nashville&token=YJTAUMDIRAXX76DJBHFA`, {
+        "headers": {
+            "Accept": "application/json"
+        }
+    })
+        .then(response => response.json())
+        
+}
+    
+        
+const uniqueEvent = (Id) => {
+    return fetch(`https://www.eventbriteapi.com/v3/events/${Id}/?token=YJTAUMDIRAXX76DJBHFA`, {
+        "headers": {
+            "Accept": "application/json"
+        }
+    })
+        .then(response => response.json())
+        
+}
 
 
-// }
-// meetUpAPI("movie")
+// meetUpAPI("${userInput}")
+// created constant for Userinput for text boc and submit buton
+const eventsSearchButton = document.querySelector("#eventSubmit")
+const userInput = document.querySelector("#meetUpSearch")
+
+
+// console.log("userINputBox", userInput)
+// created event for add Click
+
+eventsSearchButton.addEventListener("click", () => {
+    event.preventDefault()
+    meetUpAPI(userInput.value)
+})
+// document.querySelector("#eventSubmit").addEventListener("click", () => {
+
+// })
 
 // End MeetUp Section

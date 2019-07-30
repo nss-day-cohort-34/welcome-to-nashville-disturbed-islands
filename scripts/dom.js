@@ -32,8 +32,30 @@ const toItineraryButton = document.querySelector("#addToItinerary")
 
 
 
-// MeetUp Section
 
+// MeetUp Sectiot
+// DOM Selectors
+const meetUpSelector = document.querySelector("#eventSubmit");
+const meetUpItinerarySelector = document.querySelector("#myMeetUp")
 
+console.log(meetUpItinerarySelector)
 
+const meetupResults = document.querySelector("#meetUpResults")
+
+// DOM input for search results
+const resultsHTMLRender = HTMLinsert => {
+    meetupResults.innerHTML += HTMLinsert;
+    
+    
+};
+
+const resultsMeetUpHTMLRender = HTMLinsert => {
+    meetUpResultsSelector.innerHTML += HTMLinsert
+}
+
+// Dom input for Iten results
+const itineraryHTMLRender = HTMLinsert => {
+    meetUpItinerarySelector.innerHTML = HTMLinsert
+
+}
 // End MeetUp Section
