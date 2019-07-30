@@ -49,9 +49,17 @@ const meetUpAPI = (searchItem) => {
         .then(response => response.json())
         
 }
+    
         
+const uniqueEvent = (Id) => {
+    return fetch(`https://www.eventbriteapi.com/v3/events/${Id}/?token=YJTAUMDIRAXX76DJBHFA`, {
+        "headers": {
+            "Accept": "application/json"
+        }
+    })
+        .then(response => response.json())
         
-
+}
 
 
 // meetUpAPI("${userInput}")
