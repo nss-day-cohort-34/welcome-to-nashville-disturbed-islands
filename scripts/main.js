@@ -80,14 +80,8 @@ document.querySelector("#meetUpResults").addEventListener("click", event => {
   uniqueEvent(eventID).then(data => {
     const eventHTML = meetUpId(data);
 
-<<<<<<< HEAD
-    itineraryHTMLRender(eventHTML);
+    itineraryHTMLRenderItineraryEvents(eventHTML);
   });
 });
-=======
-      itineraryHTMLRenderItineraryEvents(eventHTML)
-    })
-})
->>>>>>> master
 
 // End MeetUp Section
