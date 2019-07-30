@@ -41,7 +41,7 @@ const meetUpHTML = event => {
   return `
     <section class="meetUpResults">
     <h1>${event.name.text}</h1>
-    <p id="eventP">${event.description.text}</p>
+    <p id="eventP">${event.description}</p>
     <button id=${event.id}>Save</button>
     </section>
     

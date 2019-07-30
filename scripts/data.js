@@ -55,12 +55,12 @@ const meetUpAPI = searchItem => {
 
 const uniqueEvent = Id => {
   return fetch(
-    `https://www.eventbriteapi.com/v3/events/${Id}/?token=YJTAUMDIRAXX76DJBHFA`,
-    {
-      headers: {
-        Accept: "application/json"
-      }
-    }
+    `https://www.eventbriteapi.com/v3/events/${Id}/?token=YJTAUMDIRAXX76DJBHFA`
+    // {
+    //   headers: {
+    //     Accept: "application/json"
+    //   }
+    // }
   ).then(response => response.json());
 };
 

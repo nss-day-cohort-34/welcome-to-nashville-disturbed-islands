@@ -74,15 +74,15 @@ restResultsSection.addEventListener("click", event => {
 
 // End Restaurant Section
 
-const searchValue = document.querySelector("#meetUpSearch");
-
 // MeetUp Section
 document.querySelector("#eventSubmit").addEventListener("click", event => {
   event.preventDefault();
-  meetUpAPI(searchValue.value).then(meetUpArray => {
+  const searchValue = document.querySelector("#meetUpSearch").value;
+  meetUpAPI(searchValue).then(meetUpArray => {
+    console.log(meetUpArray);
     meetUpArray.events.forEach(meetUp => {
       const htmlRep = meetUpHTML(meetUp);
-      //  console.log("HTMLrep", htmlRep)
+      // console.log(htmlRep);
 
       ResultsSelectorresultsMeetUpHTMLRender(htmlRep);
     });
