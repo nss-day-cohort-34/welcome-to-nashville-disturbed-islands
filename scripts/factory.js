@@ -5,7 +5,7 @@ const createParksHTML = parkObject => {
     return ` 
         <h2>${parkObject.park_name}</h2>
         <p>${parkObject.mapped_location.human_address}</p>
-        <button class="itineraryBTN" id=${nameOfPark}>Add to Itinerary</button>
+        <button class="BTN" id=${nameOfPark}>Add to Itinerary</button>
    `
 }
 

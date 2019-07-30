@@ -22,7 +22,11 @@ document.querySelector("#parkBTN").addEventListener("click", event => {
 
 const ItineraryContainer = document.querySelector("#myPark")
 
-resultsContainer.addEventListener("click", event => {
+resultsContainer.addEventListener("click", event => { 
+
+    if (event.target.className.includes("BTN")) {
+        
+    
     const parkName = event.target.id.split(",").join(" ")
     getParkByName(parkName)
     .then(park => {
@@ -31,7 +35,7 @@ resultsContainer.addEventListener("click", event => {
         const parkHTML = createItineraryHTML(park[0])
         parkItineraryToDom(ItineraryContainer, parkHTML)
 
-    })
+    })}
 })
 
 
