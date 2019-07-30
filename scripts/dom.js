@@ -26,17 +26,37 @@ const itineraryHTMLRender = HtmlInsert => {
 // End Concert Section
 
 // Restaurant Section
-const restResultsSection = document.querySelector("#restaurantResults");
-// const rest ItinerarySection = document.querySelector("#myRestaurant");
-const putRestaurantToDOM = htmlRep => {
-  restResultsSection.innerHTML += htmlRep;
-};
-const putRestToItinerary = htmlRep => {
-  restItinerarySection.innerHTML += htmlRep;
-};
+// const restResultsSection = document.querySelector("#restaurantResults")
+// const restItinerarySection = document.querySelector("#myRestaurant")
+// const putRestaurantToDOM = (htmlRep) => {
+//     restResultsSection.innerHTML += htmlRep
+// }
+// const putRestToItinerary = (htmlRep) => {
+//     restItinerarySection.innerHTML += htmlRep
+// }
 
 // End Restaurant Section
 
-// MeetUp Section
+// MeetUp Sectiot
+// DOM Selectors
+const meetUpSelector = document.querySelector("#eventSubmit");
+const meetUpItinerarySelector = document.querySelector("#myMeetUp");
 
+console.log(meetUpItinerarySelector);
+
+const meetupResults = document.querySelector("#meetUpResults");
+
+// DOM input for search results
+const resultsHTMLRender = HTMLinsert => {
+  meetupResults.innerHTML += HTMLinsert;
+};
+
+const resultsMeetUpHTMLRender = HTMLinsert => {
+  meetUpResultsSelector.innerHTML += HTMLinsert;
+};
+
+// Dom input for Iten results
+const itineraryHTMLRender = HTMLinsert => {
+  meetUpItinerarySelector.innerHTML = HTMLinsert;
+};
 // End MeetUp Section
