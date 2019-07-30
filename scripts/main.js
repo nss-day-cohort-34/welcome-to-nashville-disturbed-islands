@@ -19,17 +19,43 @@ document.querySelector("#parkBTN").addEventListener("click", (event) => {
     })
 })
 
-const itineraryParksFunction = () => {
-    document.querySelector("#parkResults").addEventListener("click", (event) => {
-        const parkName = event.target.id
-        const parkName2 = parkName.split(",").join(" ")
-        getParkByName(parkName2)
-        .then((data) => {
-        data.forEach(park => { 
-            const itineraryHTML = createItineraryHTML(park)
-            parkItineraryToDom(itineraryHTML)
-    });
-})
+
+// const itineraryParksFunction = () => {
+//     const buttonToSaveToItinerary = document.querySelectorAll(".itineraryBTN")
+//     buttonToSaveToItinerary.forEach(button => {
+//         button.addEventListener("click", () => {
+//         const parkName = event.target.id
+//         const parkName2 = parkName.split(",").join(" ")
+//         getParkByName(parkName2)
+//         .then((data) => {
+//         data.forEach(park => { 
+//             const itineraryHTML = createItineraryHTML(park)
+//             parkItineraryToDom(itineraryHTML)
+//     })
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+// const itineraryParksFunction = () => {
+//     document.querySelectorAll(".itineraryBTN").addEventListener("click", (event) => {
+//         const parkName = event.target.id
+//         const parkName2 = parkName.split(",").join(" ")
+//         getParkByName(parkName2)
+//         .then((data) => {
+//         data.forEach(park => { 
+//             const itineraryHTML = createItineraryHTML(park)
+//             parkItineraryToDom(itineraryHTML)
+//     });
+// })
 
 
 // End Park Section
