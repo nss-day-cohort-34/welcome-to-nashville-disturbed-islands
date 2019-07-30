@@ -65,7 +65,7 @@ document.querySelector("#eventSubmit").addEventListener("click", event => {
       const htmlRep = meetUpHTML(meetUp);
       //  console.log("HTMLrep", htmlRep)
 
-      resultsHTMLRender(htmlRep);
+      resultsMeetUpHTMLRenderResultsSelector(htmlRep);
     });
   });
 });
@@ -80,8 +80,14 @@ document.querySelector("#meetUpResults").addEventListener("click", event => {
   uniqueEvent(eventID).then(data => {
     const eventHTML = meetUpId(data);
 
+<<<<<<< HEAD
     itineraryHTMLRender(eventHTML);
   });
 });
+=======
+      itineraryHTMLRenderItineraryEvents(eventHTML)
+    })
+})
+>>>>>>> master
 
 // End MeetUp Section
