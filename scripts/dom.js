@@ -42,18 +42,18 @@ console.log(meetUpItinerarySelector)
 const meetupResults = document.querySelector("#meetUpResults")
 
 // DOM input for search results
-const resultsHTMLRender = HTMLinsert => {
+const resultsHTMLResultsEvent = HTMLinsert => {
     meetupResults.innerHTML += HTMLinsert;
     
     
 };
 
-const resultsMeetUpHTMLRender = HTMLinsert => {
+const resultsMeetUpHTMLRenderResultsSelector = HTMLinsert => {
     meetUpResultsSelector.innerHTML += HTMLinsert
 }
 
 // Dom input for Iten results
-const itineraryHTMLRender = HTMLinsert => {
+const itineraryHTMLRenderItineraryEvents = HTMLinsert => {
     meetUpItinerarySelector.innerHTML = HTMLinsert
 
 }
