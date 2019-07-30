@@ -1,8 +1,67 @@
-// Park Section
+// Reference to dom
+// Event listener
+// Get data
+// Html Representation
+// Render to dom
+
+
+const resultsContainer = document.querySelector("#parkResults")
+console.log(resultsContainer)
+document.querySelector("#parkBTN").addEventListener("click", event => {
+    event.preventDefault()
+    const parkInput = document.querySelector("#parkInput").value
+    console.log(parkInput)
+    parksAPI(parkInput)
+    .then(parkArray => {
+        parkArray.forEach(park => { 
+            const parkHTML = createParksHTML(park)
+            parksToDom(resultsContainer, parkHTML)
+        });
+    }) 
+})
+
+const ItineraryContainer = document.querySelector("#myPark")
+
+resultsContainer.addEventListener("click", event => { 
+
+    if (event.target.className.includes("BTN")) {
+        
+    
+    const parkName = event.target.id.split(",").join(" ")
+    getParkByName(parkName)
+    .then(park => {
+        console.log(park)
+        console.log(park[0])
+        const parkHTML = createItineraryHTML(park[0])
+        parkItineraryToDom(ItineraryContainer, parkHTML)
+
+    })}
+})
+
+
+
+
+// const itineraryParksFunction = () => {
+//     const buttonToSaveToItinerary = document.querySelectorAll(".itineraryBTN")
+//     buttonToSaveToItinerary.forEach(button => {
+//         button.addEventListener("click", () => {
+//         const parkName = event.target.id
+//         const parkName2 = parkName.split(",").join(" ")
+//         getParkByName(parkName2)
+//         .then((data) => {
+//         data.forEach(park => { 
+//             const itineraryHTML = createItineraryHTML(park)
+//             parkItineraryToDom(itineraryHTML)
+//     })
+// })
+
+
 
 
 
 // End Park Section
+
+
 
 
 
