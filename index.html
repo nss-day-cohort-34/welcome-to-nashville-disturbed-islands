@@ -21,17 +21,21 @@
     <form class="form">
       <!-- Park Section -->
       <fieldset>
-        <input
-          name="park"
-          id="parkSearch"
-          placeholder="Park Search"
-        ></input>
-        <button type="submit" id="parkBtn">
+        <select id="parkInput">
+          <option>Search:</option>
+          <option value="playground=Yes">Playground</option>
+          <option value="dog_park=Yes">Dog Park</option>
+          <option value="hiking_trails=Yes">Hiking Trails</option>
+          <option value="swimming_pool=Yes">Swimming Pool</option>
+        </select>
+        <button id="parkBtn">
           <i class="fa fa-search"></i>
         </button>
       </fieldset>
 
-      <!-- Concert Section -->
+    <!-- end Park Section -->
+
+    <!-- Concert Section -->
 
       <fieldset id="concertContainer">
         <input
@@ -43,9 +47,11 @@
           <i class="fa fa-search"></i>
         </button>
       </fieldset>
+    
 
-      <!-- Restaurant Section -->
+    <!-- end Concert Section -->
 
+    <!-- Restaurant Section -->
       <fieldset>
         <input
           name="restaurant"
@@ -57,8 +63,9 @@
         </button>
       </fieldset>
 
-      <!-- MeetUp Section -->
+    <!--end Restaurant Section -->
 
+    <!-- meet up -->
       <fieldset>
         <input
           name="meet up"
@@ -69,6 +76,7 @@
           <i class="fa fa-search"></i>
         </button>
       </fieldset>
+      <!-- end meet up -->
     </form>
     
     <!-- Itinerary Window  -->
@@ -80,14 +88,14 @@
       <section id="myMeetUp"></section>
     </article>
 
-    <!-- Result Window -->
+  <!-- Result Window -->
 
-    <article class="ResultWindow">
-      <section id="parkResults"></section>
-      <section id="concertResults"></section>
-      <section id="restaurantResults"></section>
-      <section id="meetUpResults"></section>
-    </article>
+  <article class="ResultWindow">
+    <section id="parkResults"></section>
+    <section id="concertResults"></section>
+    <section id="restaurantResults"></section>
+    <section id="meetUpResults"></section>
+  </article>
 
     <script src="scripts/data.js"></script>
     <script src="scripts/factory.js"></script>

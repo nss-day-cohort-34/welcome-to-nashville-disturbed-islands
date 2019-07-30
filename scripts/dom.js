@@ -1,5 +1,13 @@
 // Park Section
 
+const parksToDom = (location, string) => {
+  location.innerHTML += string;
+};
+
+const parkItineraryToDom = (location, itineraryHTML) => {
+  location.innerHTML = itineraryHTML;
+};
+
 // End Park Section
 
 // Concert Section
