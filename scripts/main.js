@@ -35,7 +35,7 @@ document.querySelector("#eventSubmit").addEventListener("click", event => {
       const htmlRep = meetUpHTML(meetUp);
       //  console.log("HTMLrep", htmlRep)
 
-      resultsHTMLRender(htmlRep);
+      resultsMeetUpHTMLRenderResultsSelector(htmlRep);
     });
   });
 });
@@ -52,7 +52,7 @@ document.querySelector("#meetUpResults").addEventListener("click", (event) => {
     .then(data => {
       const eventHTML = meetUpId(data)
 
-      itineraryHTMLRender(eventHTML)
+      itineraryHTMLRenderItineraryEvents(eventHTML)
     })
 })
 
