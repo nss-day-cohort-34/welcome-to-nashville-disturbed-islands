@@ -22,10 +22,16 @@ const concertData = search => {
 // End Concert Section
 
 // Restaurant Section
-const restaurantDataFetcher = () => {
+const restaurantDataFetcher = search => {
   return fetch(
-    "https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&start=first&sort=rating&apikey=a0eaa35e7faf94a1910b953153e9caa4"
+    `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?q=${search}&start=0&count=20&apikey=6f84aef0ac528e0cb5e716e3465de3f9`
   ).then(results => results.json());
+};
+
+const idFetcher = restID => {
+  return fetch(
+    `https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/restaurant?res_id=${restID}&apikey=6f84aef0ac528e0cb5e716e3465de3f9`
+  ).then(r => r.json());
 };
 
 // End Restaurant Section
