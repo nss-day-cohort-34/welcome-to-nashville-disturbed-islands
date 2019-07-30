@@ -115,7 +115,7 @@ document.querySelector("#eventSubmit").addEventListener("click", event => {
   .then(meetUpArray => {
     meetUpArray.events.forEach(meetUp => {
       const htmlRep = meetUpHTML(meetUp);
-      //  console.log("HTMLrep", htmlRep)
+       console.log("HTMLrep", htmlRep)
       resultsHTMLRender(htmlRep)
     })
   })
