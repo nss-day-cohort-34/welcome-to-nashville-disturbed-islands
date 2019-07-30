@@ -35,16 +35,6 @@ document.querySelector("#parkBTN").addEventListener("click", (event) => {
 // })
 
 
-
-
-
-
-
-
-
-
-
-
 // const itineraryParksFunction = () => {
 //     document.querySelectorAll(".itineraryBTN").addEventListener("click", (event) => {
 //         const parkName = event.target.id
@@ -65,7 +55,7 @@ document.querySelector("#parkBTN").addEventListener("click", (event) => {
 
 
 // Concert Section
-concertData('rap')
+// concertData('rap')
 
 
 // End Concert Section
@@ -83,10 +73,35 @@ concertData('rap')
 // End Restaurant Section
 
 
-
+const searchValue = document.querySelector("#meetUpSearch")
 
 // MeetUp Section
+document.querySelector("#eventSubmit").addEventListener("click", event => {
+  event.preventDefault();
+  meetUpAPI(searchValue.value).then(meetUpArray => {
+    meetUpArray.events.forEach(meetUp => {
+      const htmlRep = meetUpHTML(meetUp);
+      //  console.log("HTMLrep", htmlRep)
+
+      resultsMeetUpHTMLRenderResultsSelector(htmlRep);
+    });
+  });
+});
 
 
+// putting event listner for a click, created storage for the event target (Event ID) invoved fetch call
+// uniqueevent .then extrapulated the paramater of data and stored it into a const "eventHTML" 
+
+document.querySelector("#meetUpResults").addEventListener("click", (event) => {
+  console.log(event)
+  const eventID = event.target.id
+  // console.log(eventID)
+  uniqueEvent(eventID)
+    .then(data => {
+      const eventHTML = meetUpId(data)
+
+      itineraryHTMLRenderItineraryEvents(eventHTML)
+    })
+})
 
 // End MeetUp Section
