@@ -32,12 +32,16 @@ const createItineraryHTML = parkObject => {
 
 // Restaurant Section
 const createRestaurantHTML = (restaurant) => {
-    return `<p class="restaurantHTML">${restaurant.name}</p>
-            <button></button>`
+    return `<div id="restaurant--${restaurant.id}">
+            <p class="restaurantHTML" id="restName--${restaurant.id}">${restaurant.name}</p>
+            <button type="submit" id="add--${restaurant.id}">Add To Itinerary</button>
+            </div>`
+            
 }
-const itineraryHTML = (result) => {
-    return `<p id="itineraryRestHTML">Let's go eat at ${result}</p>`
+const itineraryHTMLCreator = (result) => {
+    return `<p id="itineraryRestHTML">Let's go eat at ${result.name}</p>`
 }
+
 
 
 // End Restaurant Section
