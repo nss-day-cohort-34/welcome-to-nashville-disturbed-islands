@@ -101,41 +101,36 @@ restResultsSection.addEventListener("click", (event) => {
     2.use that id to find the matching p tag
     3.get the text content property of that p tag
     4.add that restaurant name to my itinerary dom element
-    */
+//     */
 })
 
 // End Restaurant Section
 
 
-const searchValue = document.querySelector("#meetUpSearch")
-
 // MeetUp Section
 document.querySelector("#eventSubmit").addEventListener("click", event => {
-  event.preventDefault();
-  meetUpAPI(searchValue.value).then(meetUpArray => {
+  event.preventDefault()
+  const searchValue = document.querySelector("#meetUpSearch").value
+  meetUpAPI(searchValue)
+  .then(meetUpArray => {
     meetUpArray.events.forEach(meetUp => {
       const htmlRep = meetUpHTML(meetUp);
-      //  console.log("HTMLrep", htmlRep)
-
-      resultsMeetUpHTMLRenderResultsSelector(htmlRep);
-    });
-  });
-});
+       console.log("HTMLrep", htmlRep)
+      resultsHTMLRender(htmlRep)
+    })
+  })
+})
 
 
 // putting event listner for a click, created storage for the event target (Event ID) invoved fetch call
 // uniqueevent .then extrapulated the paramater of data and stored it into a const "eventHTML" 
 
 document.querySelector("#meetUpResults").addEventListener("click", (event) => {
-  console.log(event)
+  event.preventDefault()
   const eventID = event.target.id
-  // console.log(eventID)
   uniqueEvent(eventID)
     .then(data => {
       const eventHTML = meetUpId(data)
-
-      itineraryHTMLRenderItineraryEvents(eventHTML)
+      itineraryHTMLRender(eventHTML)
     })
 })
-
-// End MeetUp Section

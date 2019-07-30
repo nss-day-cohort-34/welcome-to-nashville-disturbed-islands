@@ -1,102 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
-    
-    
-  
-     
-      <!-- Park Section -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+</head>
 
 <body>
-  <form>
 
-    <!-- Park Section -->
 
-    <fieldset>
-      <select id="parkInput">
-        <option>Search:</option>
-        <option value="playground=Yes">Playground</option>
-        <option value="dog_park=Yes">Dog Park</option>
-        <option value="hiking_trails=Yes">Hiking Trails</option>
-        <option value="swimming_pool=Yes">Swimming Pool</option>
-      </select>
-      <button id="parkBTN">
-      SEARCH
-      </button>
-    </fieldset>
 
-    <!-- Concert Section -->
+
+  <!-- Park Section -->
+
+  <body>
+    <form>
+
+      <!-- Park Section -->
 
       <fieldset>
-        <textarea
-          name="restaurant"
-          id="restaurantSearch"
-          col="20"
-          rows="1"
-          placeholder="Restaurant Search"
-        ></textarea>
+        <select id="parkInput">
+          <option>Search:</option>
+          <option value="playground=Yes">Playground</option>
+          <option value="dog_park=Yes">Dog Park</option>
+          <option value="hiking_trails=Yes">Hiking Trails</option>
+          <option value="swimming_pool=Yes">Swimming Pool</option>
+        </select>
+        <button id="parkBTN">
+          SEARCH
+        </button>
+      </fieldset>
+
+      <!-- Concert Section -->
+
+      <fieldset>
+        <textarea name="restaurant" id="restaurantSearch" col="20" rows="1" placeholder="Restaurant Search"></textarea>
         <button id="inputButton">
           SEARCH
         </button>
       </fieldset>
 
-    <!-- Restaurant Section -->
+      <!-- Restaurant Section -->
 
       <fieldset>
-        <textarea
-          name="meet up"
-          id="meetUpSearch"
-          col="20"
-          rows="1"
-          placeholder="Meet Up Search"
-        ></textarea>
-        <button  id="eventSubmit">
+        <textarea name="meet up" id="meetUpSearch" col="20" rows="1" placeholder="Meet Up Search"></textarea>
+        <button id="eventSubmit">
           SEARCH
         </button>
       </fieldset>
-   
 
-    <!-- MeetUp Section -->
 
-    <fieldset>
-      <textarea name="meet up" id="meetUpSearch" col="20" rows="1" placeholder="Meet Up Search"></textarea>
-      <button type="submit">
-        SEARCH
-      </button>
-    </fieldset>
-  </form>
+      <!-- MeetUp Section -->
 
-  <!-- Result Window -->
-  <h1>Results</h1>
-  <article>
-    <section id="parkResults"></section>
-    <section id="concertResults"></section>
-    <section id="restaurantResults"></section>
-    <section id="meetUpResults"></section>
-  </article>
 
-  <!-- Itinerary Window  -->
+    <!-- Result Window -->
+    <h1>Results</h1>
+    <article>
+      <section id="parkResults"></section>
+      <section id="concertResults"></section>
+      <section id="restaurantResults"></section>
+      <section id="meetUpResults"></section>
+    </article>
 
-  <h1>My itinerary</h1>
-  <article>
-    <section id="myPark"></section>
-    <section id="myConcert"></section>
-    <section id="myRestaurant"></section>
-    <section id="myMeetUp"></section>
-  </article>
-  <script src="scripts/data.js"></script>
-  <script src="scripts/factory.js"></script>
-  <script src="scripts/dom.js"></script>
-  <script src="scripts/main.js"></script>
-</body>
+    <!-- Itinerary Window  -->
+
+    <h1>My itinerary</h1>
+    <article>
+      <section id="myPark"></section>
+      <section id="myConcert"></section>
+      <section id="myRestaurant"></section>
+      <section id="myMeetUps"></section>
+    </article>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/factory.js"></script>
+    <script src="scripts/dom.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
 
 </html>

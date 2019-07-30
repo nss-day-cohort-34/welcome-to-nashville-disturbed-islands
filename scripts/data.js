@@ -9,7 +9,7 @@ const getParkByName = (parkName) => {
     .then(response => response.json())
 }
 
-// End Park Section
+// // End Park Section
 
 
 
@@ -24,16 +24,16 @@ const concertData = (search) => {
 
 
 
-// Restaurant Section
-const restaurantDataFetcher = (search) => {
-   return fetch(`https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?q=${search}&start=0&count=20&apikey=6f84aef0ac528e0cb5e716e3465de3f9`) 
-    .then(results => results.json())
-}
+// // Restaurant Section
+// const restaurantDataFetcher = (search) => {
+//    return fetch(`https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?q=${search}&start=0&count=20&apikey=6f84aef0ac528e0cb5e716e3465de3f9`) 
+//     .then(results => results.json())
+// }
 
-const idFetcher = (restID) => {
-    return fetch(`https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/restaurant?res_id=${restID}&apikey=6f84aef0ac528e0cb5e716e3465de3f9`)
-    .then(r => r.json())
-}
+// const idFetcher = (restID) => {
+//     return fetch(`https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/restaurant?res_id=${restID}&apikey=6f84aef0ac528e0cb5e716e3465de3f9`)
+//     .then(r => r.json())
+// }
 
 
 
@@ -73,17 +73,13 @@ const uniqueEvent = (Id) => {
 
 // meetUpAPI("${userInput}")
 // created constant for Userinput for text boc and submit buton
-const eventsSearchButton = document.querySelector("#eventSubmit")
-const userInput = document.querySelector("#meetUpSearch")
+
 
 
 // console.log("userINputBox", userInput)
 // created event for add Click
 
-eventsSearchButton.addEventListener("click", () => {
-    event.preventDefault()
-    meetUpAPI(userInput.value)
-})
+
 // document.querySelector("#eventSubmit").addEventListener("click", () => {
 
 // })
