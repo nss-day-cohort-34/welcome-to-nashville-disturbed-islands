@@ -3,10 +3,7 @@
 // End Park Section
 
 // Concert Section
-// const getValue = () => {
-//     let valueInput = document.getElementById("concertSearch").value;
-//     console.log(valueInput);
-// }
+
 const htmlConcert = concertObj => {
   console.log(concertObj);
   return `
