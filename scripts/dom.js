@@ -42,7 +42,7 @@ const toItineraryButton = document.querySelector("#addToItinerary");
 
 // MeetUp Sectiot
 // DOM Selectors
-const meetUpSelector = document.querySelector("#eventSubmit");
+const eventSearchButton = document.querySelector("#eventSubmit");
 const meetUpItinerarySelector = document.querySelector("#myMeetUp");
 
 console.log(meetUpItinerarySelector);
@@ -51,15 +51,15 @@ const meetupResults = document.querySelector("#meetUpResults");
 
 // DOM input for search results
 const resultsHTMLResultsEvent = HTMLinsert => {
-  meetupResults.innerHTML += HTMLinsert;
+  resultsHTMLResultsEvent.innerHTML += HTMLinsert;
 };
 
-const resultsMeetUpHTMLRenderResultsSelector = HTMLinsert => {
-  meetUpResultsSelector.innerHTML += HTMLinsert;
+const ResultsSelectorresultsMeetUpHTMLRender = HTMLinsert => {
+  ResultsSelectorresultsMeetUpHTMLRender.innerHTML += HTMLinsert;
 };
 
 // Dom input for Iten results
 const itineraryHTMLRenderItineraryEvents = HTMLinsert => {
-  meetUpItinerarySelector.innerHTML = HTMLinsert;
+  itineraryHTMLRenderItineraryEvents = HTMLinsert;
 };
 // End MeetUp Section

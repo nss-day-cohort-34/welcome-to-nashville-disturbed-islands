@@ -1,5 +1,10 @@
 /* concert section styles */
-#concertSearchBut {
+
+/* button styles */
+#concertSearchBut,
+#inputButton,
+#eventSubmit,
+#parkBtn {
   background-color: #418fde;
   width: 11%;
   padding: 5px;
@@ -11,22 +16,40 @@
   cursor: pointer;
 }
 
+/* button hoover effects */
+
 #concertSearchBut:hover {
   background: navy;
 }
+#inputButton:hover {
+  background: navy;
+}
+#eventSubmit:hover {
+  background: crimson;
+}
+#parkBtn:hover {
+  background: crimson;
+}
+/* end button hoover */
 
-#concertResults {
+#concertResults,
+#restaurantResults,
+#parkResults,
+#meetUpResults {
   border: 4px solid goldenrod;
   background: #418fde;
   padding: 10px 10px 10px 10px;
   justify-content: space-evenly;
   width: 20%;
-  height: auto;
+  height: 20%;
   margin: 5px 5px 5px 5px;
   opacity: 0.9;
   text-align: center;
 }
-#myConcert {
+#myConcert,
+#myRestaurant,
+#myPark,
+#myMeetUp {
   border: 4px solid goldenrod;
   background: #418fde;
   padding: 15px 15px 15px 15px;

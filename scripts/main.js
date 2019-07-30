@@ -84,7 +84,7 @@ document.querySelector("#eventSubmit").addEventListener("click", event => {
       const htmlRep = meetUpHTML(meetUp);
       //  console.log("HTMLrep", htmlRep)
 
-      resultsMeetUpHTMLRenderResultsSelector(htmlRep);
+      ResultsSelectorresultsMeetUpHTMLRender(htmlRep);
     });
   });
 });

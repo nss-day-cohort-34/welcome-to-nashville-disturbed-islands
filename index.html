@@ -21,15 +21,13 @@
     <form class="form">
       <!-- Park Section -->
       <fieldset>
-        <textarea
+        <input
           name="park"
           id="parkSearch"
-          col="20"
-          rows="1"
           placeholder="Park Search"
-        ></textarea>
-        <button type="submit">
-          SEARCH
+        ></input>
+        <button type="submit" id="parkBtn">
+          <i class="fa fa-search"></i>
         </button>
       </fieldset>
 
@@ -49,33 +47,38 @@
       <!-- Restaurant Section -->
 
       <fieldset>
-        <textarea
+        <input
           name="restaurant"
           id="restaurantSearch"
-          col="20"
-          rows="1"
           placeholder="Restaurant Search"
-        ></textarea>
+        ></input>
         <button id="inputButton">
-          SEARCH
+          <i class="fa fa-search"></i>
         </button>
       </fieldset>
 
       <!-- MeetUp Section -->
 
       <fieldset>
-        <textarea
+        <input
           name="meet up"
           id="meetUpSearch"
-          col="20"
-          rows="1"
           placeholder="Meet Up Search"
-        ></textarea>
+        ></input>
         <button  id="eventSubmit">
-          SEARCH
+          <i class="fa fa-search"></i>
         </button>
       </fieldset>
     </form>
+    
+    <!-- Itinerary Window  -->
+
+    <article class="ItineraryWindow">
+      <section id="myPark"></section>
+      <section id="myConcert"></section>
+      <section id="myRestaurant"></section>
+      <section id="myMeetUp"></section>
+    </article>
 
     <!-- Result Window -->
 
@@ -86,14 +89,6 @@
       <section id="meetUpResults"></section>
     </article>
 
-    <!-- Itinerary Window  -->
-
-    <article class="ItineraryWindow">
-      <section id="myPark"></section>
-      <section id="myConcert"></section>
-      <section id="myRestaurant"></section>
-      <section id="myMeetUp"></section>
-    </article>
     <script src="scripts/data.js"></script>
     <script src="scripts/factory.js"></script>
     <script src="scripts/dom.js"></script>

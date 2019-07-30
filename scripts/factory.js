@@ -30,7 +30,7 @@ const createRestaurantHTML = restaurant => {
             </div>`;
 };
 const itineraryHTMLCreator = result => {
-  return `<p id="itineraryRestHTML">Let's go eat at ${result.name}</p>`;
+  return `<p id="itineraryRestHTML">Let's go eat at ${result.name}!</p>`;
 };
 
 // End Restaurant Section
