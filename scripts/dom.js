@@ -20,14 +20,14 @@ const musicResultsSelector = document.querySelector("#concertResults");
 
 // Dom input for search results
 const searchHTMLRender = HtmlInsert => {
-  searchValue.innerHTML += HtmlInsert;
+  musicSearchValue.innerHTML += HtmlInsert;
 };
 // Dom input for results results
-const resultsHTMLRender = HtmlInsert => {
+const resultsDomRender = HtmlInsert => {
   musicResultsSelector.innerHTML += HtmlInsert;
 };
 // Dom input for itinerary results
-const itineraryHTMLRender = HtmlInsert => {
+const itineraryDomRender = HtmlInsert => {
   musicItinerarySelector.innerHTML += HtmlInsert;
 };
 
@@ -50,24 +50,22 @@ const toItineraryButton = document.querySelector("#addToItinerary");
 
 // MeetUp Sectiot
 // DOM Selectors
-const eventSearchButton = document.querySelector("#eventSubmit");
-const meetUpItinerarySelector = document.querySelector("#myMeetUp");
-
-// console.log(meetUpItinerarySelector)
+const meetUpItinerarySelector = document.querySelector("section#myMeetUps");
+console.log(meetUpItinerarySelector);
+const meetUpSelector = document.querySelector("#eventSubmit");
 
 const meetupResults = document.querySelector("#meetUpResults");
 
 // DOM input for search results
-const resultsHTMLResultsEvent = HTMLinsert => {
-  resultsHTMLResultsEvent.innerHTML += HTMLinsert;
+const resultsHTMLRender = HTMLinsert => {
+  meetupResults.innerHTML += HTMLinsert;
 };
 
-const ResultsSelectorresultsMeetUpHTMLRender = HTMLinsert => {
-  ResultsSelectorresultsMeetUpHTMLRender.innerHTML += HTMLinsert;
-};
+// const resultsMeetUpHTMLRender = HTMLinsert => {
+//     meetUpResultsSelector.innerHTML += HTMLinsert
+// }
 
 // Dom input for Iten results
-const itineraryHTMLRenderItineraryEvents = HTMLinsert => {
-  itineraryHTMLRenderItineraryEvents = HTMLinsert;
+const itineraryHTMLRender = HTMLinsert => {
+  meetUpItinerarySelector.innerHTML = HTMLinsert;
 };
-// End MeetUp Section

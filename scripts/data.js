@@ -11,7 +11,7 @@ const getParkByName = parkName => {
   ).then(response => response.json());
 };
 
-// End Park Section
+// // End Park Section
 
 // Concert Section
 // the varible concertData is a function that returns a fetch call from the ticket master url
@@ -70,16 +70,10 @@ const uniqueEvent = Id => {
 
 // meetUpAPI("${userInput}")
 // created constant for Userinput for text boc and submit buton
-const eventsSearchButton = document.querySelector("#eventSubmit");
-const userInput = document.querySelector("#meetUpSearch");
 
 // console.log("userINputBox", userInput)
 // created event for add Click
 
-eventsSearchButton.addEventListener("click", () => {
-  event.preventDefault();
-  meetUpAPI(userInput.value);
-});
 // document.querySelector("#eventSubmit").addEventListener("click", () => {
 
 // })

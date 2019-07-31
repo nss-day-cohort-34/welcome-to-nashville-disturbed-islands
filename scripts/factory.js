@@ -1,21 +1,19 @@
 // Park Section
 const createParksHTML = parkObject => {
-    
-    const nameOfPark = parkObject.park_name.split(" ").join(",") 
-    return ` 
+  const nameOfPark = parkObject.park_name.split(" ").join(",");
+  return ` 
         <h2>${parkObject.park_name}</h2>
         <p>${parkObject.mapped_location.human_address}</p>
         <button class="BTN" id=${nameOfPark}>Add to Itinerary</button>
-   `
-}
-
+   `;
+};
 
 const createItineraryHTML = parkObject => {
-    return ` 
+  return ` 
         <h2>${parkObject.park_name}</h2>
         <p>${parkObject.mapped_location.human_address}</p>
-   `
-}
+   `;
+};
 
 // End Park Section
 
@@ -50,7 +48,7 @@ const itineraryHTMLCreator = result => {
   return `<p id="itineraryRestHTML">Let's go eat at ${result.name}!</p>`;
 };
 
-// End Restaurant Section
+// // End Restaurant Section
 
 // MeetUp Section
 const meetUpHTML = event => {
@@ -73,7 +71,7 @@ const meetUpId = event => {
     </section>
     `;
 };
-
+console.log(meetUpId);
 // const meetupItinerary = (result) => {
 //     return `<p id="itinerarResultHTML"></p>
 //     <button>Save Event</button>`

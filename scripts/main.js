@@ -56,13 +56,13 @@ document.querySelector("#concertSearchBut").addEventListener("click", event => {
   //   empty string allows on set of info to be viewed at a time
   musicResultsSelector.innerHTML = "";
   //   stores value from input field
-  const searchValue = document.querySelector("#concertSearch").value;
-  concertData(searchValue)
+  const musicSearchValue = document.querySelector("#concertSearch").value;
+  concertData(musicSearchValue)
     .then(concertArray => {
-      const searchArray = concertArray._embedded.events;
-      searchArray.forEach(concert => {
-        const htmlRep = htmlConcert(concert);
-        resultsHTMLRender(htmlRep);
+      const musicSearchArray = concertArray._embedded.events;
+      musicSearchArray.forEach(concert => {
+        const musicHtmlRep = htmlConcert(concert);
+        resultsDomRender(musicHtmlRep);
       });
     })
     .then(() => {
@@ -72,12 +72,12 @@ document.querySelector("#concertSearchBut").addEventListener("click", event => {
 
 const buttonThing = () => {
   const buttonSave = document.querySelectorAll(".saveMe");
-  buttonSave.forEach(button => {
-    button.addEventListener("click", () => {
-      const header2 = button.parentElement.childNodes[1];
-      const header4 = button.parentElement.childNodes[3];
-      const para = button.parentElement.childNodes[5];
-      console.log(button.parentElement.childNodes);
+  buttonSave.forEach(musicButton => {
+    musicButton.addEventListener("click", () => {
+      const header2 = musicButton.parentElement.childNodes[1];
+      const header4 = musicButton.parentElement.childNodes[3];
+      const para = musicButton.parentElement.childNodes[5];
+      console.log(musicButton.parentElement.childNodes);
       const newHtml = `<h2>${header2.innerHTML}</h2>
     <h4>${header4.innerHTML}</h4>
     <p>${para.innerHTML}</p>
@@ -116,7 +116,7 @@ restResultsSection.addEventListener("click", event => {
     2.use that id to find the matching p tag
     3.get the text content property of that p tag
     4.add that restaurant name to my itinerary dom element
-    */
+//     */
 });
 
 // End Restaurant Section
@@ -126,12 +126,10 @@ document.querySelector("#eventSubmit").addEventListener("click", event => {
   event.preventDefault();
   const searchValue = document.querySelector("#meetUpSearch").value;
   meetUpAPI(searchValue).then(meetUpArray => {
-    console.log(meetUpArray);
     meetUpArray.events.forEach(meetUp => {
       const htmlRep = meetUpHTML(meetUp);
-      // console.log(htmlRep);
-
-      ResultsSelectorresultsMeetUpHTMLRender(htmlRep);
+      console.log("HTMLrep", htmlRep);
+      resultsHTMLRender(htmlRep);
     });
   });
 });
@@ -140,14 +138,10 @@ document.querySelector("#eventSubmit").addEventListener("click", event => {
 // uniqueevent .then extrapulated the paramater of data and stored it into a const "eventHTML"
 
 document.querySelector("#meetUpResults").addEventListener("click", event => {
-  console.log(event);
+  event.preventDefault();
   const eventID = event.target.id;
-  // console.log(eventID)
   uniqueEvent(eventID).then(data => {
     const eventHTML = meetUpId(data);
-
-    itineraryHTMLRenderItineraryEvents(eventHTML);
+    itineraryHTMLRender(eventHTML);
   });
 });
-
-// End MeetUp Section
