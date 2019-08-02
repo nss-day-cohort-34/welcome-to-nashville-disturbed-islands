@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-
-
-
-  <!-- Park Section -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/concert.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <title>Welcome to Nashville</title>
+  </head>
+  <header>
+    <h1 class="=header_style">🎙 Welcome to Nashville!🎸🛴</h1>
+  </header>
 
   <body>
-    <form>
-
+    <form class="form">
       <!-- Park Section -->
-
       <fieldset>
         <select id="parkInput">
           <option>Search:</option>
@@ -30,55 +28,78 @@
           <option value="hiking_trails=Yes">Hiking Trails</option>
           <option value="swimming_pool=Yes">Swimming Pool</option>
         </select>
-        <button id="parkBTN">
-          SEARCH
+        <button id="parkBtn">
+          <i class="fa fa-search"></i>
         </button>
       </fieldset>
 
-      <!-- Concert Section -->
+    <!-- end Park Section -->
 
+    <!-- Concert Section -->
+
+      <fieldset id="concertContainer">
+        <input
+          name="concert"
+          id="concertSearch"
+          placeholder="Search by Genre"
+        ></input>
+        <button id="concertSearchBut" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </fieldset>
+    
+
+    <!-- end Concert Section -->
+
+    <!-- Restaurant Section -->
       <fieldset>
-        <textarea name="restaurant" id="restaurantSearch" col="20" rows="1" placeholder="Restaurant Search"></textarea>
+        <input
+          name="restaurant"
+          id="restaurantSearch"
+          placeholder="Restaurant Search"
+        ></input>
         <button id="inputButton">
-          SEARCH
+          <i class="fa fa-search"></i>
         </button>
       </fieldset>
 
-      <!-- Restaurant Section -->
+    <!--end Restaurant Section -->
 
+    <!-- meet up -->
       <fieldset>
-        <textarea name="meet up" id="meetUpSearch" col="20" rows="1" placeholder="Meet Up Search"></textarea>
-        <button id="eventSubmit">
-          SEARCH
+        <input
+          name="meet up"
+          id="meetUpSearch"
+          placeholder="Meet Up Search"
+        ></input>
+        <button  id="eventSubmit">
+          <i class="fa fa-search"></i>
         </button>
       </fieldset>
-
-
-      <!-- MeetUp Section -->
-
-
-    <!-- Result Window -->
-    <h1>Results</h1>
-    <article>
-      <section id="parkResults"></section>
-      <section id="concertResults"></section>
-      <section id="restaurantResults"></section>
-      <section id="meetUpResults"></section>
-    </article>
-
+      <!-- end meet up -->
+    </form>
+    
     <!-- Itinerary Window  -->
 
-    <h1>My itinerary</h1>
-    <article>
+    <article class="ItineraryWindow">
       <section id="myPark"></section>
       <section id="myConcert"></section>
       <section id="myRestaurant"></section>
-      <section id="myMeetUps"></section>
+      <section id="myMeetUp"></section>
     </article>
+
+  <!-- Result Window -->
+
+  <article class="ResultWindow">
+    <section id="parkResults"></section>
+    <section id="concertResults"></section>
+    <section id="restaurantResults"></section>
+    <section id="meetUpResults"></section>
+  </article>
+
     <script src="scripts/data.js"></script>
     <script src="scripts/factory.js"></script>
     <script src="scripts/dom.js"></script>
     <script src="scripts/main.js"></script>
   </body>
-
 </html>
